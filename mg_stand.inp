@@ -1,0 +1,65 @@
+#####################################################################################################
+#Settings to modify, all are given in the Nested Sampling section of the experimental detail section
+#####################################################################################################
+
+#maximum volume per atom given in Angstroms when the random configuration is initialised
+max_volume_per_atom=
+
+#Atomic number and number of atoms used eg "start_species= 1 15" for 15 hydrogen atoms
+start_species=
+
+#total number of walkers, this must be a multiple of the number of cores available for efficiency
+#I used 1248 for 48 cores. 1240 is close enough for 40 cores 
+n_walkers=
+
+#number of walkers to cull at each NS iteration
+n_cull=
+
+#pressure given in units of eV per Angstrom squared. The conversion for Pa is 1Pa = 6.242e-12 eV/A2
+MC_cell_P=
+
+#temperature at which to stop the sampling procedure in Kelvin
+converge_down_to_T=
+
+
+#The total number of model calls/moves allowed to decorrelate a configuration
+n_model_calls_expected=
+
+#The number of each operation performed to decorrelate the walkers
+#The number of atom steps is the number of times a simulation can be started
+#and the atom trajectory length is the number of steps allowed in that simulation
+n_atom_steps=
+atom_traj_len=
+
+#With these steps the volume is shrunk, or the cell sheered, or stretched a given number of times
+n_cell_volume_steps=
+n_cell_shear_steps=
+n_cell_stretch_steps=
+
+#The above operations are performed until n_model_calls_expected has been performed
+
+
+#Fixed cell aspect ratio to maintain to prevent the cell becoming too stretched
+MC_cell_min_aspect_ratio=
+
+#Name of the output files, change if you want to
+out_file_prefix=mg16_1GPa
+
+###################################################################################################
+#Settings that you don't need to change, they only affect performance etc.
+###################################################################################################
+#Lammps settings used by pymatnest
+LAMMPS_name=serial
+LAMMPS_serial=true
+
+#Settings to say we wants to use the lammps calculator, and use MD to decorrelate walkers
+atom_algorithm=MD
+energy_calculator=lammps
+LAMMPS_init_cmds=pair_style eam/fs ; pair_coeff * * Mg1.eam.fs Mg
+LAMMPS_atom_types=Mg 1
+
+#After how many iterations should a configuration be outputted for viewing
+traj_interval=50
+
+#After how many interations it will create a checkpoint to restart the calculation from if it fails
+snapshot_interval=5000
