@@ -1,6 +1,7 @@
 # NS_Reproducible_Result
 This contains everything you need to reproduce the nested sampling result discussed in the paper.
-I have designed this so that everything can be contained in a directory that can be deleted once finished, you will not have to modify any of your existing software.
+Everything can be contained in a directory and deleted once finished. This will not change any of your existing software or settings.
 
 1) First run the installer.sh script this will install and compile lammps and pymatnest for use.
-2) Modify the 
+2) Modify the mg_stand.inp file with the settings from the paper. I have added comments to assist.
+3) Run the script
