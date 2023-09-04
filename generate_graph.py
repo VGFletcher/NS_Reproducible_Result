@@ -5,7 +5,7 @@ import pandas as pd
 import scipy.signal as scp
 import sys
 
-percentile = float(sys.argv[1])
+percentile = 99
 
 #Import data
 dat = np.array(pd.read_csv(f"analysis_data.dat", delim_whitespace=True,skiprows=[0]))
