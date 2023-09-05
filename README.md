@@ -16,4 +16,4 @@ Everything can be contained in a directory and deleted once finished. This will 
 
 7) Finally, to plot the heat capacity curve, and output the peak location and full width half maximum, run the `generate_graph.py` script as `python3 generate_graph.py`.
 
-You should have a heat capcity curve saved and the peak location and width is printed to the terminal. It should be around 912.0 K ± 233.3 K. You can see this result in figure 1 of the paper.
+You should have a heat capcity curve saved and the peak location and width is printed to the terminal. It should be around 912.0 K ± 233.3 K. You can see this result in figure 1 of the paper. Nested sampling is a stochastic process so there may be some slight difference in these values.
