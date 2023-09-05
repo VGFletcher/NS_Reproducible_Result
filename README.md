@@ -8,12 +8,12 @@ Everything can be contained in a directory and deleted once finished. This will 
 
 3) Next run the `installer_p2.sh` script. This will compile lammps and install pymatnest. Now the required programs are installed.
 
-4) Modify the mg_stand.inp file with the settings from the paper. I have added comments to assist.
+4) Modify the `mg_stand.inp` file with the settings from the paper. However change the number of atoms to 16 not 64. If you use 64 atoms the calculation will take around a day. I have added comments to assist.
   
-5) Run the script `run.sh` script to run the pymatnest code. This will take x hours so take a break.
+5) Run the `run.sh` script to run the pymatnest code. This will take around 4 hours so take a break.
    
 6) Run the `analysis.sh` script to get the heat capacity curve data. This will take a few minutes.
 
-7) Finally, to plot the heat capacity curve and output the peak location and full width half maximum, run the `generate_graph.py` script as `python3 generate_graph.py`.
+7) Finally, to plot the heat capacity curve, and output the peak location and full width half maximum, run the `generate_graph.py` script as `python3 generate_graph.py`.
 
 You should have a heat capcity curve saved and the peak location and width is printed to the terminal.
