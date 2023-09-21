@@ -3,12 +3,11 @@
 #Load Modules
 module purge
 
-module load GCCcore/10.2.0
-module load Python/3.8.6
-module load GCC/10.2.0
-module load OpenMPI/4.0.5
-module load OpenMPI/4.0.5
-module load ASE/3.21.1
+module load GCCcore/11.3.0
+module load Python/3.10.4
+module load GCC/11.3.0
+module load OpenMPI/4.1.4
+module load ASE/3.22.1
 
 #Running the analysis feature in nested sampling the command is:
 #mpirun -n 'number of threads' 'ns_analyse location' -M 'minimum temperature' -D 'temperature step K' -n 'number of temperature steps' > 'output file'
