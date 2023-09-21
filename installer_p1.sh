@@ -3,21 +3,11 @@
 #Load Modules
 module purge
 
-module load GCCcore/10.2.0
-module load Python/3.8.6
-module load GCC/10.2.0
-module load OpenMPI/4.0.5
-module load OpenMPI/4.0.5
-module load ASE/3.21.1
+module load GCCcore/11.3.0
+module load Python/3.10.4
+module load GCC/11.3.0
+module load OpenMPI/4.1.4
+module load ASE/3.22.1
 
-#Download lammps
-git clone -b release https://github.com/lammps/lammps.git
-
-#Install Additional Packages
-cd lammps/src/
-
-make yes-EXTRA-COMPUTE
-make yes-EXTRA-FIX
-make yes-MANYBODY
-make yes-MEAM
-make yes-PYTHON
+#Run pymatnest you may want/need to change the number of threads I've put 40
+mpirun -n 40 ./pymatnest/ns_run <mg_stand.inp>> mg_stand.out
