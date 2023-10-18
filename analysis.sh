@@ -12,3 +12,6 @@ module load ASE/3.22.1
 #Running the analysis feature in nested sampling the command is:
 #mpirun -n 'number of threads' 'ns_analyse location' -M 'minimum temperature' -D 'temperature step K' -n 'number of temperature steps' > 'output file'
 mpirun -n 40 ./pymatnest/ns_analyse mg16_1GPa.energies -M 200 -D 1 -n 10000 > analysis_data.dat
+
+#Run script to plot the heat capacity and extract the peak and peak width
+python3 generate_graph.py
