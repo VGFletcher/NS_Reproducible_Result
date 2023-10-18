@@ -4,7 +4,7 @@ Everything can be contained in a directory and deleted once finished.
 
 1) First run the `installer_p1.sh` script. This will install all the required lammps files.
 
-2) To be able to use the pymatnest package properly with python, you need to go to `lammps/src/MAKE/` and edit `Makefile.serial` so that `LMP_INC= -DLAMMPS_EXCEPTIONS -DLAMMPS_GZIP -DLAMMPS_MEMALIGN=64`
+2) To be able to use the pymatnest package properly with python, you need to go to `./lammps/src/MAKE/` and edit `Makefile.serial` so that `LMP_INC= -DLAMMPS_EXCEPTIONS -DLAMMPS_GZIP -DLAMMPS_MEMALIGN=64`
 
 3) Next run the `installer_p2.sh` script. This will compile lammps and install pymatnest. Now the required programs are installed.
 
