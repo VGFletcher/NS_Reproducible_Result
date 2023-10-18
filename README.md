@@ -16,4 +16,4 @@ Everything can be contained in a directory and deleted once finished.
    
 7) Run the `analysis.sh` script to get the heat capacity curve data from the nested sampling `.energies` file. From this the peak location and width will be picked to identify the transition point and give a measure of the uncertainty.
 
-You should have a heat capcity curve `.png` saved and the peak location and width is printed to the terminal. It should be around 912.0 K ± 233.3 K. You can see this result in the left plot of figure 1 in the paper. Nested sampling is a stochastic process so there may be some slight difference (10s of K) in these values.
+You should have a heat capcity curve `.png` saved and the peak location and width is printed to the terminal. It should be around 912.0 K ± 233.3 K. This is the melting temperature of pure magnesium at 1GPa predicted by the Zhou EAM potential. You can see this result in the left plot of figure 1 in the paper. Nested sampling is a stochastic process so there may be some slight difference (10s of K) in these values.
