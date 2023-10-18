@@ -18,9 +18,5 @@ make -j 40 serial mode=shlib
 #Create python package
 make install-python
 
-#Create link to python package
-cd ../../
-ln -s lammps/src/liblammps_serial.so ./liblammps_serial.so
-
 #Install pymatnest
 git clone https://github.com/libAtoms/pymatnest.git
