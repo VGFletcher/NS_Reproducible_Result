@@ -14,8 +14,6 @@ Everything can be contained in a directory and deleted once finished.
   
 6) Run the `run.sh` script to run the pymatnest code. This will take around 6-7 hours so take a break. If at any point the run is interrupted once it has started running, you can just re-run the `run.sh` script and the calculation will pick up where it left off.
    
-7) Run the `analysis.sh` script to get the heat capacity curve data. This will take a few minutes.
+7) Run the `analysis.sh` script to get the heat capacity curve data from the nested sampling `.energies` file. From this the peak location and width will be picked to identify the transition point and give a measure of the uncertainty.
 
-8) Finally, to plot the heat capacity curve, and output the peak location and full width half maximum, run the `generate_graph.py` script as `python3 generate_graph.py`.
-
-You should have a heat capcity curve saved and the peak location and width is printed to the terminal. It should be around 912.0 K ± 233.3 K. You can see this result in figure 1 of the paper. Nested sampling is a stochastic process so there may be some slight difference in these values.
+You should have a heat capcity curve `.png` saved and the peak location and width is printed to the terminal. It should be around 912.0 K ± 233.3 K. You can see this result in the left plot of figure 1 in the paper. Nested sampling is a stochastic process so there may be some slight difference (10s of K) in these values.
