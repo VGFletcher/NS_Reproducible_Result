@@ -12,7 +12,7 @@ Everything can be contained in a directory and deleted once finished.
 
 5) Now modify the `mg_stand.inp` file with the settings from the paper. However change the number of atoms to 16 not 64, and the number of walkers from 1248 to 1240. If you use 64 atoms the calculation will take around a day, and you will not be able to use 1248 walkers with 40 cores. I have added comments to assist.
   
-6) Run the `run.sh` script to run the pymatnest code. This will take around 5-6 hours so take a break. If at any point the run is interrupted once it has started running, you can just re-run the `run.sh` script and the calculation will pick up where it left off.
+6) Run the `run.sh` script to run the pymatnest code. This will take around 6-7 hours so take a break. If at any point the run is interrupted once it has started running, you can just re-run the `run.sh` script and the calculation will pick up where it left off.
    
 7) Run the `analysis.sh` script to get the heat capacity curve data. This will take a few minutes.
 
